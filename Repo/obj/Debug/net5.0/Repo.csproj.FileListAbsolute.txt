@@ -1,0 +1,5 @@
+F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Repo\bin\Debug\net5.0\Models.dll
+F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Repo\obj\Debug\net5.0\Repo.csprojAssemblyReference.cache
+F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Repo\obj\Debug\net5.0\Repo.GeneratedMSBuildEditorConfig.editorconfig
+F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Repo\obj\Debug\net5.0\Repo.AssemblyInfoInputs.cache
+F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Repo\obj\Debug\net5.0\Repo.AssemblyInfo.cs
