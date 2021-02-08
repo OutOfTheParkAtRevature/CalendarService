@@ -1,6 +1,0 @@
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\bin\Debug\net5.0\Models.dll
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\bin\Debug\net5.0\Repo.dll
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\obj\Debug\net5.0\Logic.csprojAssemblyReference.cache
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\obj\Debug\net5.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\obj\Debug\net5.0\Logic.AssemblyInfoInputs.cache
-F:\Visual Studio Projects\P3_LeagueManager\CalendarService\Logic\obj\Debug\net5.0\Logic.AssemblyInfo.cs
