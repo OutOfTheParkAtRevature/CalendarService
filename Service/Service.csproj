@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.49.0.2224" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -19,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Model.csproj" />
-    <ProjectReference Include="..\Repo\Repo.csproj" />
+    <ProjectReference Include="..\Repo\Repository.csproj" />
   </ItemGroup>
 
 </Project>

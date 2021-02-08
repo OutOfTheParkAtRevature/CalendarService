@@ -5785,9 +5785,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repo.csproj",
-      "projectName": "Repo",
-      "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repo.csproj",
+      "projectUniqueName": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repository.csproj",
+      "projectName": "Repository",
+      "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repository.csproj",
       "packagesPath": "C:\\Users\\theje\\.nuget\\packages\\",
       "outputPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\obj\\",
       "projectStyle": "PackageReference",

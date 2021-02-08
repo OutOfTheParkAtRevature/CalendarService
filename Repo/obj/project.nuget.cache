@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5SCOiitKoHd16YqAxrURhD+6bUN7vAn0bKe4uzCZf16rjodOwq6Z8Za4AFHhPhcluOuSl01NbBKzDEOz76K9Sw==",
+  "dgSpecHash": "ZX3LLxhb+p+CUti4iXUQBC4yZTE3lPYlUe+zegsS+h4I/toa24SZpNAJ+9ueQ5Qz83V7ghCltDSNMQQP/j8s+w==",
   "success": true,
-  "projectFilePath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repo.csproj",
+  "projectFilePath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Repo\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\theje\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\theje\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
