@@ -6003,41 +6003,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\theje\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/matthewdemonaco/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\CalendarService\\CalendarService.csproj",
+      "projectUniqueName": "/Users/matthewdemonaco/Documents/GitHub/CalendarService/CalendarService/CalendarService.csproj",
       "projectName": "CalendarService",
-      "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\CalendarService\\CalendarService.csproj",
-      "packagesPath": "C:\\Users\\theje\\.nuget\\packages\\",
-      "outputPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\CalendarService\\obj\\",
+      "projectPath": "/Users/matthewdemonaco/Documents/GitHub/CalendarService/CalendarService/CalendarService.csproj",
+      "packagesPath": "/Users/matthewdemonaco/.nuget/packages/",
+      "outputPath": "/Users/matthewdemonaco/Documents/GitHub/CalendarService/CalendarService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\theje\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/matthewdemonaco/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Logic\\Service.csproj": {
-              "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Logic\\Service.csproj"
+            "/Users/matthewdemonaco/Documents/GitHub/CalendarService/Logic/Service.csproj": {
+              "projectPath": "/Users/matthewdemonaco/Documents/GitHub/CalendarService/Logic/Service.csproj"
             },
-            "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Models\\Model.csproj": {
-              "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\CalendarService\\Models\\Model.csproj"
+            "/Users/matthewdemonaco/Documents/GitHub/CalendarService/Models/Model.csproj": {
+              "projectPath": "/Users/matthewdemonaco/Documents/GitHub/CalendarService/Models/Model.csproj"
             }
           }
         }
@@ -6095,7 +6089,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
