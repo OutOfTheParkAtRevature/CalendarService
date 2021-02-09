@@ -22,13 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repo\Reposito
 		{C1F00EEA-1693-4714-815D-B4F940BC8EFA} = {C1F00EEA-1693-4714-815D-B4F940BC8EFA}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarService.Tests", "CalendarService.Tests\CalendarService.Tests.csproj", "{3286004F-2ADA-4364-AC4C-E50FAB19B055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalendarService.Tests", "CalendarService.Tests\CalendarService.Tests.csproj", "{3286004F-2ADA-4364-AC4C-E50FAB19B055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model.Tests", "Model.Tests\Model.Tests.csproj", "{0D193119-3B34-45BC-BCD9-51DA65736150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model.Tests", "Model.Tests\Model.Tests.csproj", "{0D193119-3B34-45BC-BCD9-51DA65736150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repo.Tests", "Repo.Tests\Repo.Tests.csproj", "{71358477-7AC6-497E-AFB1-F5394A25ABC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository.Tests", "Repo.Tests\Repository.Tests.csproj", "{71358477-7AC6-497E-AFB1-F5394A25ABC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Tests", "Service.Tests\Service.Tests.csproj", "{7DB749FA-A39E-4840-B541-10F0781BB6BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Tests", "Service.Tests\Service.Tests.csproj", "{7DB749FA-A39E-4840-B541-10F0781BB6BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
