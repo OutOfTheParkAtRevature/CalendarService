@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Repo.Tests
+namespace Repository.Tests
 {
     public class UnitTest1
     {
