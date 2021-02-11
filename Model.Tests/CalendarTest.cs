@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Xunit;
-using Model;
 using System.Linq;
 
 namespace Model.Tests
