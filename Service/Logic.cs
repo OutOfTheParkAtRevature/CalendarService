@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Service                                           //Need to add json credential file, change jsonFile string, change ApplicationName, change CalendarId
+namespace Service
 {
     public class Logic
     {
@@ -18,7 +18,7 @@ namespace Service                                           //Need to add json c
         /// <returns>Calendar service</returns>
         public static async Task<CalendarService> InitializeCalendar()
         {
-            string jsonFile = "p2nullreturners-997092916366.json";
+            string jsonFile = "outofthepark-1613140661667-b43832259c90.json";
             string[] Scopes = { CalendarService.Scope.Calendar };
             ServiceAccountCredential credential;
             await using (var stream =
@@ -34,7 +34,7 @@ namespace Service                                           //Need to add json c
             var service = new CalendarService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = "P2NullReturners",
+                ApplicationName = "OutOfThePark",
             });
             return service;
         }
@@ -46,7 +46,7 @@ namespace Service                                           //Need to add json c
         public static async Task<Calendar> GetCalendar()
         {
             CalendarService service = await InitializeCalendar();
-            string calendarId = @"a6jdhdbp5mpv8au8mbps8qfelk@group.calendar.google.com";
+            string calendarId = @"outoftheparkcalendar@gmail.com";
             var calendar = await service.Calendars.Get(calendarId).ExecuteAsync();
             return calendar;
         }
@@ -58,7 +58,7 @@ namespace Service                                           //Need to add json c
         public static async Task<IEnumerable<Event>> GetMyEvents()
         {
             CalendarService service = await InitializeCalendar();
-            string calendarId = @"a6jdhdbp5mpv8au8mbps8qfelk@group.calendar.google.com";
+            string calendarId = @"outoftheparkcalendar@gmail.com";
             EventsResource.ListRequest listRequest = service.Events.List(calendarId);
             listRequest.TimeMin = DateTime.Now;
             listRequest.ShowDeleted = false;
@@ -85,7 +85,7 @@ namespace Service                                           //Need to add json c
         public static async Task<Event> CreateEvent(EventDto eventDto)
         {
             CalendarService service = await InitializeCalendar();
-            string calendarId = @"a6jdhdbp5mpv8au8mbps8qfelk@group.calendar.google.com";
+            string calendarId = @"outoftheparkcalendar@gmail.com";
             EventDateTime start = new EventDateTime()
             {
                 DateTime = eventDto.StartTime
@@ -123,7 +123,7 @@ namespace Service                                           //Need to add json c
         public static async Task<Event> EditEvent(EventDto eventDto, string Id)
         {
             CalendarService service = await InitializeCalendar();
-            string calendarId = @"a6jdhdbp5mpv8au8mbps8qfelk@group.calendar.google.com";
+            string calendarId = @"outoftheparkcalendar@gmail.com";
             EventDateTime start = new EventDateTime()
             {
                 DateTime = eventDto.StartTime
@@ -155,7 +155,7 @@ namespace Service                                           //Need to add json c
         public static async Task<string> DeleteEvent(string eventId)
         {
             CalendarService service = await InitializeCalendar();
-            string calendarId = @"a6jdhdbp5mpv8au8mbps8qfelk@group.calendar.google.com";
+            string calendarId = @"outoftheparkcalendar@gmail.com";
             var status = await service.Events.Delete(calendarId, eventId).ExecuteAsync();
             return status;
         }

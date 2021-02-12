@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="credentials.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Apis.Calendar.v3" Version="1.50.0.2224" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
@@ -21,6 +25,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Models\Model.csproj" />
     <ProjectReference Include="..\Repo\Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="outofthepark-1613140661667-b43832259c90.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
