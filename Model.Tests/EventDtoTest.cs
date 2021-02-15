@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Xunit;
 using System.Linq;
+using Models.DataTransfer;
 
 namespace Model.Tests
 {
-    public class CalendarTest
+    public class EventDtoTest
     {
 
 
@@ -30,18 +31,18 @@ namespace Model.Tests
         /// </summary>
         ///
 
-        public void ValidateCalendar()
+        public void ValidateEventDto()
         {
-            var calendar = new Calendar()
+            var eventDto = new EventDto()
             {
-                Location = "field",
                 Description = "practice",
+                Location = "field",
+                Message = "come",
                 StartTime = DateTime.Now,
                 EndTime = DateTime.Now,
-                Message = "come"
             };
 
-            var errorcount = ValidateModel(calendar).Count;
+            var errorcount = ValidateModel(eventDto).Count;
             Assert.Equal(0, errorcount);
         }
     }
