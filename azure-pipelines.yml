@@ -1,0 +1,45 @@
+trigger:
+- staging
+
+pr:
+- staging
+
+pool:
+  vmImage: windows-latest
+
+stages:
+  - stage:
+    displayName: Analyze
+    jobs:
+      - job: analyze
+        steps:
+          - task: DotNetCoreCLI@2
+            displayName: Restore Solution
+            inputs:
+              command: restore
+              projects: '*/*.csproj'
+          - task: SonarCloudPrepare@1
+            inputs:
+              SonarCloud: 'sonarcloud connection'
+              organization: 121420-dotnet-sonarcloud
+              projectKey: OutOfTheParkCalendarService
+              projectName: OutOfTheParkCalendarService
+              scannerMode: MSBuild
+              extraProperties: |
+                sonar.exclusions=**/obj/**,**/lib/**,**/*.dll
+          - script: dotnet build --configuration Release
+            displayName: Analyze Build
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: test
+              projects: '*.Tests/*.csproj'
+              arguments: --configuration Release --collect "Code Coverage"
+          - task: PublishCodeCoverageResults@1
+            displayName: Publish Code Coverage Results
+            inputs:
+              codeCoverageTool: Cobertura
+              summaryFileLocation: $(Agent.TempDirectory)/*/cobertura/coverage.xml
+          - task: SonarCloudAnalyze@1
+            displayName: Run Code Analysis
+          - task: SonarCloudPublish@1
+            displayName: Publish Code Analysis
