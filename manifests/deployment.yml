@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calendar-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calendar-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: calendar-service
+    spec:
+      containers:
+        - name: calendar-service
+          image: outofthepark15226.azurecr.io/calendar-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              name: cal-http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: calendar-service-deployment
+spec:
+  ports:
+    - name: calendar-service
+      port: 80
+      targetPort: cal-http
+  selector:
+    app: calendar-service
+  type: LoadBalancer
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: calendar-service-ingress
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  - host: calendar-service.1c50b018f5784721b39b.eastus.aksapp.io
+    http:
+      paths:
+      - pathType: Prefix
+        backend:
+          serviceName: calendar-service-deployment
+          servicePort: 80
+        path: /calendar(/|$)(.*)
