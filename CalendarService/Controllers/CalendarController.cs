@@ -9,12 +9,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CalendarService
 {
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CalendarController : ControllerBase
     {
         private readonly ILogger<CalendarController> _logger;
@@ -30,12 +32,14 @@ namespace CalendarService
         }
 
         [HttpGet("events")]
+        [Authorize]
         public async Task<IEnumerable<Event>> GetMyEvents()
         {
             return await Logic.GetMyEvents();
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Event>> CreateEvent(EventDto eventDto)
         {
             var ret = await Logic.CreateEvent(eventDto);
@@ -47,12 +51,14 @@ namespace CalendarService
         }
 
         [HttpPut("events/{id}")]
+        [Authorize]
         public async Task<ActionResult<Event>> EditEvent(EventDto eventDto, string id)
         {
             return await Logic.EditEvent(eventDto, id);
         }
 
         [HttpDelete("events/{id}")]
+        [Authorize]
         public async Task<ActionResult<string>> DeleteEvent(string id)
         {
             return await Logic.DeleteEvent(id);
