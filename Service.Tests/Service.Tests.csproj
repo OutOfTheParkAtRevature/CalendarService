@@ -20,4 +20,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CalendarService\CalendarService.csproj" />
+    <ProjectReference Include="..\Models\Model.csproj" />
+    <ProjectReference Include="..\Repo\Repository.csproj" />
+    <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
 </Project>
