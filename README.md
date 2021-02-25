@@ -1,6 +1,6 @@
 # CalendarService
 ## Description
-Allows coaches to create, edit, and delete an event using Google's calendar API. The coaches can schedule games with the feature.
+Allows head coaches to create, edit, and delete an event using Google's calendar API. The head coaches can schedule games with the feature.
 
 ## Functionality
 * Full functionality of Google's calendar API
