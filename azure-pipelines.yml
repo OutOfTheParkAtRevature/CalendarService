@@ -120,3 +120,56 @@ stages:
             - task: Kubernetes@1
               inputs:
                 command: 'logout'
+
+
+    - deployment: DeployAgain
+      displayName: Deploy
+      pool:
+        vmImage: 'ubuntu-latest'
+      environment: 'spike2.default'
+      variables:
+      - group: Release
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - download: current
+              artifact: manifests
+
+
+            - task: KubectlInstaller@0
+              inputs:
+                kubectlVersion: 'latest'
+            - task: Kubernetes@1
+              inputs:
+                connectionType: 'Kubernetes Service Connection'
+                kubernetesServiceEndpoint: 'Kubernetes Cluster Connection Take 2'
+                namespace: 'default'
+                command: 'login'
+
+            - task: KubernetesManifest@0
+              displayName: Create imagePullSecret
+              inputs:
+                action: createSecret
+                secretName: $(imagePullSecret)
+                dockerRegistryEndpoint: 'Container Registry Connection'
+                kubernetesServiceConnection: 'Kubernetes Cluster Connection Take 2'
+                namespace: 'default'
+
+            - task: KubernetesManifest@0
+              displayName: Deploy to Kubernetes cluster
+              inputs:
+                action: deploy
+                kubernetesServiceConnection: 'Kubernetes Cluster Connection Take 2'
+                namespace: 'default'
+                manifests: |
+                  $(Pipeline.Workspace)/manifests/deployment.yml
+                imagePullSecrets: |
+                  $(imagePullSecret)
+                containers: |
+                  $(RegistryName)/$(calendarRepository):$(tag)
+            
+
+            - task: Kubernetes@1
+              inputs:
+                command: 'logout'
