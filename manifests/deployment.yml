@@ -24,6 +24,8 @@ spec:
           ports:
             - containerPort: 80
               name: cal-http
+            - containerPort: 443
+              name: cal-https
 ---
 apiVersion: v1
 kind: Service
@@ -31,26 +33,14 @@ metadata:
   name: calendar-service-deployment
 spec:
   ports:
-    - name: calendar-service
+    - name: http
+      protocol: TCP
       port: 80
-      targetPort: cal-http
+      targetPort: 80
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
   selector:
     app: calendar-service
   type: LoadBalancer
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: calendar-service-ingress
-  annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
-spec:
-  rules:
-  - host: calendar-service.1c50b018f5784721b39b.eastus.aksapp.io
-    http:
-      paths:
-      - pathType: Prefix
-        backend:
-          serviceName: calendar-service-deployment
-          servicePort: 80
-        path: /calendar(/|$)(.*)
