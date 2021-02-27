@@ -32,6 +32,7 @@ kind: Service
 metadata:
   name: calendar-service-deployment
 spec:
+  clusterIP: 10.0.179.34
   ports:
     - name: http
       protocol: TCP
