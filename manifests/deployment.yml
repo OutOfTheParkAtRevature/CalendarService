@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: calendar-service
-          image: outofthepark15226.azurecr.io/calendar-service
+          image: outoftheparkacr.azurecr.io/calendar-service
           imagePullPolicy: Always
           ports:
             - containerPort: 80
