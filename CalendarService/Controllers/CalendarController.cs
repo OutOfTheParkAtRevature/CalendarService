@@ -16,6 +16,7 @@ namespace CalendarService
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CalendarController : ControllerBase
     {
         private readonly ILogger<CalendarController> _logger;
